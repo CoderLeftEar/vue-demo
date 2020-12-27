@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --font-size: 14px;
+      --border-radius: 4px;
+      --button-height: 32px;
+      --button-bg: white;
+      --button-active-bg: #eee;
+      --color: #999;
+      --border-color: #999;
+      --border-color-hover: #666;
+    }
+  </style>
+  <style>
+    .o-button {
+      font-size: var(--font-size);
+      height: var(--button-height);
+      padding: 0 1em;
+      border-radius: var(--border-radius);
+      border: 1px solid var(--border-color);
+      background-color: var(--button-bg);
+    }
+
+    .o-button:hover {
+      border: 1px solid var(--border-color-hover);
+    }
+
+    .o-button:active {
+      background-color: var(--button-active-bg);
+    }
+
+    .o-button:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <o-button/>
+</div>
+
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script src="./button.js"></script>
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      message: "Hello"
+    }
+  })
+</script>
+</body>
+</html>
