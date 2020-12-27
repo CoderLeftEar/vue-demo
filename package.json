@@ -1,0 +1,25 @@
+{
+  "name": "vue-demo",
+  "version": "1.0.0",
+  "description": "vue-demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoderLeftEar/vue-demo.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "wangwenyong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CoderLeftEar/vue-demo/issues"
+  },
+  "homepage": "https://github.com/CoderLeftEar/vue-demo#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
+}
