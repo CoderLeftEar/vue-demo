@@ -1,6 +1,6 @@
 <template>
   <button class="o-button" :class="{[`icon-${iconPosition}`]: true}">
-    <o-icon v-if="iconName" :icon-name="iconName"></o-icon>
+    <o-icon :class="{loading: iconName === 'loading'}" v-if="iconName" :icon-name="iconName"></o-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -25,6 +25,19 @@ export default {
 
 <style lang="scss">
 .o-button {
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .loading {
+    animation: spin 1.5s infinite linear;
+  }
+
   font-size: var(--font-size);
   height: var(--button-height);
   padding: 0 1em;
@@ -50,7 +63,7 @@ export default {
 
   .icon {
     order: 1;
-    margin-right: .3em;
+    margin-right: .1em;
   }
 
   .content {
@@ -61,7 +74,7 @@ export default {
     .icon {
       order: 2;
       margin-right: 0;
-      margin-left: .3em;
+      margin-left: .1em;
     }
 
     .content {
