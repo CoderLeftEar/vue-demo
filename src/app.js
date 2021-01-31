@@ -8,6 +8,8 @@ Vue.component('o-icon', Icon)
 new Vue({
   el: "#app",
   data: {
-    message: "Hello"
+    loading1: true,
+    loading2: false,
+    loading3: false,
   }
 });

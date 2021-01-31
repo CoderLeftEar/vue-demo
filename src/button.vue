@@ -1,6 +1,7 @@
 <template>
-  <button class="o-button" :class="{[`icon-${iconPosition}`]: true}">
-    <o-icon :class="{loading: iconName === 'loading'}" v-if="iconName" :icon-name="iconName"></o-icon>
+  <button class="o-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
+    <o-icon class="icon" v-if="iconName && !loading" :icon-name="iconName"></o-icon>
+    <o-icon class="icon loading" v-if="loading" icon-name="loading"></o-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -18,6 +19,10 @@ export default {
       validator(value) {
         return !(value !== "left" && value !== "right");
       }
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   }
 }
