@@ -37,6 +37,11 @@
   <o-button :loading="loading1" @click="loading1 = !loading1">我是Orange</o-button>
   <o-button :loading="loading2" icon-name="settings" @click="loading2 = !loading2">我是Orange</o-button>
   <o-button :loading="loading3" icon-name="settings" icon-position="right" @click="loading3 = !loading3">我是Orange</o-button>
+  <o-button-group>
+    <o-button>上一页</o-button>
+    <o-button>更多...</o-button>
+    <o-button>下一页</o-button>
+  </o-button-group>
 </div>
 
 <script src="./src/app.js"></script>
