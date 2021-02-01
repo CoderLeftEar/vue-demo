@@ -6,8 +6,13 @@
 
 <script>
 export default {
-  data() {
-    return {}
+  mounted() {
+    Array.prototype.forEach.call(this.$el.children, item => {
+      let name = item.nodeName.toLowerCase()
+      if (name !== 'button') {
+        console.error(`o-button-group 组件的的子组件应该全为 o-button 组件，但你写的是 ${name}`)
+      }
+    })
   }
 }
 </script>
