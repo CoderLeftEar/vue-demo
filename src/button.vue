@@ -9,8 +9,13 @@
 </template>
 
 <script>
+import Icon from './icon'
+
 export default {
   name: "Button",
+  components:{
+    'o-icon': Icon
+  },
   props: {
     iconName: String,
     iconPosition: {
