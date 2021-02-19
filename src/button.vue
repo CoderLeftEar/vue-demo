@@ -13,7 +13,7 @@ import Icon from './icon'
 
 export default {
   name: "Button",
-  components:{
+  components: {
     'o-icon': Icon
   },
   props: {
