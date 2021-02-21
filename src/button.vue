@@ -12,7 +12,7 @@
 import Icon from './icon'
 
 export default {
-  name: "Button",
+  name: "OButton",
   components: {
     'o-icon': Icon
   },
@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .o-button {
   @keyframes spin {
     0% {

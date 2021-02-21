@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'OButtonGroup',
   mounted() {
     Array.prototype.forEach.call(this.$el.children, item => {
       let name = item.nodeName.toLowerCase()
@@ -17,7 +18,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .o-button-group {
   display: inline-flex;
   vertical-align: middle;
