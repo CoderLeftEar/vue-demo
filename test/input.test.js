@@ -1,0 +1,67 @@
+const expect = chai.expect
+import Vue from 'vue'
+import Input from '../src/input'
+
+Vue.config.production = false
+Vue.config.devtools = false
+
+describe('Input', () => {
+  it('存在', () => {
+    expect(Input).to.exist
+  })
+
+  describe('props', () => {
+    const Constructor = Vue.extend(Input)
+    let vm
+
+    afterEach(() => {
+      vm.$destroy()
+    })
+
+    it('接收 value', () => {
+      vm = new Constructor({
+        propsData: {
+          value: 'hello_123456'
+        }
+      }).$mount()
+      const inputElement = vm.$el.querySelector('input')
+      expect(inputElement.value).to.equal('hello_123456')
+    })
+
+    it('接收 disabled', () => {
+      vm = new Constructor({
+        propsData: {
+          disabled: true
+        }
+      }).$mount()
+      const inputElement = vm.$el.querySelector('input')
+      expect(inputElement.disabled).to.equal(true)
+    })
+
+    it('接收 readonly', () => {
+      vm = new Constructor({
+        propsData: {
+          readonly: true
+        }
+      }).$mount()
+      const inputElement = vm.$el.querySelector('input')
+      expect(inputElement.readOnly).to.equal(true)
+    })
+
+    it('接收 error', () => {
+      vm = new Constructor({
+        propsData: {
+          error: 'error message'
+        },
+      }).$mount()
+      const useElement = vm.$el.querySelector('use')
+      expect(useElement.getAttribute('xlink:href')).to.equal('#icon-error')
+      const errorMessage = vm.$el.querySelector('.error-message')
+      expect(errorMessage.innerHTML).to.equal('error message')
+    })
+
+    it('支持 change/input/focus/blur 事件', () => {
+
+    })
+  })
+})

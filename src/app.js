@@ -15,5 +15,10 @@ new Vue({
     loading1: true,
     loading2: false,
     loading3: false,
+  },
+  methods: {
+    handleInputChange(e) {
+      console.log(e);
+    }
   }
 })
