@@ -38,6 +38,31 @@
 
 <div id="app">
   <div class="box">
+    <o-row>
+      <o-col>1</o-col>
+      <o-col offset="2">2</o-col>
+    </o-row>
+    <o-row>
+      <o-col>1</o-col>
+      <o-col offset="2">2</o-col>
+      <o-col offset="2">3</o-col>
+    </o-row>
+    <o-row gutter="20">
+      <o-col>1</o-col>
+      <o-col>2</o-col>
+      <o-col>3</o-col>
+      <o-col offset="5">4</o-col>
+    </o-row>
+    <o-row>
+      <o-col span="2">1</o-col>
+      <o-col span="22" offset="6">2</o-col>
+    </o-row>
+    <o-row>
+      <o-col span="4">1</o-col>
+      <o-col span="20" offset="10">2</o-col>
+    </o-row>
+  </div>
+  <div class="box">
     <o-input value="张三" disabled></o-input>
     <o-input value="李四" readonly></o-input>
     <o-input value="王五" @change="handleInputChange"></o-input>
